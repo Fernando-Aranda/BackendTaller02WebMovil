@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: info
+      POSTGRES_PASSWORD: info_pass
+      POSTGRES_DB: infomovil
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+  express-recetas:
+    build: ./express-recetas
+    command: npm run dev
+    volumes:
+      - ./express-recetas:/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+
+volumes:
+  pgdata:
+  mongodata:
