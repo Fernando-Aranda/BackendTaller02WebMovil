@@ -1,3 +1,14 @@
+# Intro. Web Móvil - Grupo 5
+
+## Número de grupo
+**Grupo 5**
+
+## Integrantes
+- Bryan Carvajal - 21.177.361-8  
+- David Pino - 21.274.006-3
+- Javier Pizarro - 21.213.249-7
+- Fernando Aranda - 20.007.253-7
+
 # Proyecto Multi-DB con Docker Compose
 
 Este proyecto integra **tres APIs** diferentes, cada una con su propia base de datos, levantadas de manera conjunta mediante **Docker Compose**:
