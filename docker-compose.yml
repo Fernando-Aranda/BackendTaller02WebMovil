@@ -25,9 +25,11 @@ services:
     volumes:
       - ./express-recetas:/app
     ports:
-      - "4000:4000"
+      - "4000:5000"
     depends_on:
       - mongo
+    env_file:               
+      - ./express-recetas/.env  
 
 volumes:
   pgdata:
