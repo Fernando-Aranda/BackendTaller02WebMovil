@@ -72,7 +72,8 @@ Esto levantará:
 * Puerto expuesto: `5432`
 * Contenedor: `postgres:15`
 * API: `nestjs-users` (Gestión de usuarios/anime)
-
+* npm i
+* npm run start:dev
 ### 2. **MongoDB + Express Recetas**
 
 * Base de datos: `recetasdb` (configurable vía `.env`)
@@ -80,6 +81,8 @@ Esto levantará:
 * Contenedor: `mongo:6`
 * API: `express-recetas` (Gestión de recetas)
 * Endpoint principal: `http://localhost:4000/api/recetas`
+* npm i
+* npm run dev
 
 ### 3. **FastAPI Pokemon**
 
@@ -87,6 +90,9 @@ Esto levantará:
 * API: `fastapi-pokemon`
 * Puerto: `8000` (configurable en `app/main.py`)
 * Endpoints: `/pokemons/`
+* py -m pip install fastapi uvicorn sqlmodel
+* py -c "from app.database import get_session; from app.services.seed_service import seed_data; seed_data(next(get_session()))"
+* py -m uvicorn app.main:app --reload
 
 ---
 
